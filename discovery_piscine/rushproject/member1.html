@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jane Doe - เรซูเม่อาชีพ</title>
+    <!-- นำเข้าสไตล์สำเร็จรูปของ Bootstrap 5 -->
+    <link href="https://jsdelivr.net" rel="stylesheet">
+    <style>
+        body {
+            position: relative;
+            padding-top: 70px; /* เพิ่มระยะด้านบน 70px เพื่อไม่ให้แถบเมนูNavbarที่ตรึงอยู่ด้านบนบังเนื้อหาเว็บ */
+            background-color: #fdfdfd;
+        }
+        .hero-section {
+            /* สร้างการไล่เฉดสีจากสีน้ำเงินหลักไปยังสีน้ำเงินเข้ม */
+            background: linear-gradient(135deg, #0d6efd 0%, #0a58ca 100%);
+        }
+        .profile-img-placeholder {
+            width: 150px;
+            height: 150px;
+            background-color: #e9ecef; /* สีเทาสำหรับกล่องจำลองรูปภาพ */
+            border: 4px solid white;    /* เพิ่มเส้นขอบสีขาวหนา 4px ให้ดูเหมือนกรอบรูป */
+        }
+    </style>
+</head>
+<!-- data-bs-spy="scroll": เปิดใช้งานระบบตรวจจับการเลื่อนหน้าจอ ให้ปุ่มบน Navbar เปลี่ยนสีไฮไลท์ตามส่วนที่อ่านอยู่ปัจจุบันอัตโนมัติ -->
+<body data-bs-spy="scroll" data-bs-target="#resumeNav" data-bs-offset="80">
+
+<!-- navbar-expand-lg: ยืดแถบเมนูเต็มบนหน้าจอคอมพิวเตอร์ และหดเป็นปุ่มแฮมเบอร์เกอร์บนมือถือ -->
+<!-- navbar-dark bg-dark: กำหนดให้แถบเมนูเป็นธีมสีดำ ตัวอักษรสีขาว | fixed-top: ตรึงแถบเมนูให้อยู่ด้านบนสุดของหน้าจอเสมอไม่ว่าจะเลื่อนลงไปเท่าไหร่ -->
+<nav id="resumeNav" class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow">
+    <div class="container">
+        <!-- ลิงก์ย้อนกลับไปหน้าแรก (index.html) -->
+        <a class="navbar-brand fw-bold" href="index.html">← หน้าแรกของทีม</a>
+        
+        <!-- ปุ่มแฮมเบอร์เกอร์ที่จะแสดงเฉพาะบนหน้าจอมือถือ (เมื่อคลิกจะกางเมนูออก) -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <!-- กลุ่มลิงก์เมนูที่จะถูกซ่อนหรือกางออกตามขนาดหน้าจอ -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <!-- ms-auto: ดันกลุ่มลิงก์เมนูทั้งหมดไปชิดขวาของหน้าจอ -->
+            <ul class="navbar-nav ms-auto fw-semibold">
+                <!-- href="#id": ลิงก์แบบสมอเรือ (Anchor Link) เมื่อกดแล้วจะเลื่อนหน้าจอไปยังตำแหน่งที่มี id นั้น ๆ ทันที -->
+                <li class="nav-item"><a class="nav-link px-3" href="#profile">1. ข้อมูลโปรไฟล์</a></li>
+                <li class="nav-item"><a class="nav-link px-3" href="#experience">2. ประสบการณ์ & ทักษะ</a></li>
+                <li class="nav-item"><a class="nav-link px-3" href="#education">3. การศึกษา & ใบเซอร์</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- ส่วนที่ 1: หน้า Hero ข้อมูลโปรไฟล์ (มีระบุ id="profile" ตรงกับที่ลิงก์ Navbar เรียกใช้) -->
+<section id="profile" class="hero-section text-white py-5 shadow-sm">
+    <div class="container py-4 text-center">
+        <!-- กล่องทรงกลมจำลองแสดงรูปถ่ายโปรไฟล์ -->
+        <div class="profile-img-placeholder rounded-circle mx-auto d-flex align-items-center justify-content-center shadow mb-4 text-dark fw-bold">
+            [ รูปภาพจำลอง ]
+        </div>
+        <h1 class="display-4 fw-bold">Jane Doe</h1>
+        <!-- text-white-50: กำหนดให้ข้อความตำแหน่งงานเป็นสีขาวแบบโปร่งแสง 50% เพิ่มเลเยอร์ความสวยงาม -->
+        <p class="lead mb-0 text-white-50">Senior Software Engineer</p>
+    </div>
+</section>
+
+<!-- ส่วนที่ 2: ประสบการณ์ทำงานและทักษะความสามารถ (id="experience") -->
+<section id="experience" class="container py-5">
+    <div class="row">
+        
+        <!-- คอลัมน์ด้านซ้ายสำหรับประสบการณ์ทำงาน (col-lg-8: กว้าง 8 จาก 12 ส่วนบนหน้าจอคอมพิวเตอร์) -->
+        <div class="col-lg-8 mb-4">
+            <!-- border-bottom pb-2: ใส่เส้นขอบใต้หัวข้อและเว้นระยะด้านล่างเล็กน้อยให้ดูเป็นระเบียบ -->
+            <h2 class="fw-bold text-dark border-bottom pb-2 mb-4">ประสบการณ์การทำงาน</h2>
+            
+            <!-- บล็อกข้อมูลงานที่ 1 -->
+            <div class="mb-4">
+                <!-- justify-content-between: ดันชื่อตำแหน่งไปซ้ายสุด และดันช่วงปีไปขวาสุดแยกจากกันอัตโนมัติ -->
+                <div class="d-flex justify-content-between flex-wrap">
+                    <h5 class="fw-bold mb-1">Lead Software Architect</h5>
+                    <span class="text-muted small">2023 - ปัจจุบัน</span>
+                </div>
+                <p class="text-primary fw-medium mb-2">TechCorp Solutions</p>
+                <p class="text-muted">นำทีมย้ายระบบโครงสร้างพื้นฐานเดิม (Legacy) ไปสู่สถาปัตยกรรมแบบ Microservices บน Kubernetes บริหารจัดการทีมวิศวกรแบบ Agile รวม 8 คน และส่งมอบแพลตฟอร์ม SaaS หลักที่ช่วยลดความหน่วงของการตอบสนองระบบลงได้ถึง 40%</p>
+            </div>
+
+            <!-- บล็อกข้อมูลงานที่ 2 -->
+            <div>
+                <div class="d-flex justify-content-between flex-wrap">
+                    <h5 class="fw-bold mb-1">Backend Systems Developer</h5>
+                    <span class="text-muted small">2020 - 2023</span>
+                </div>
+                <p class="text-primary fw-medium mb-2">Innovate Web LLC</p>
+                <p class="text-muted">ออกแบบและดูแลรักษาระบบ API แบบ Event-driven ที่ปรับขนาดได้โดยใช้ Node.js และโครงสร้างพื้นฐาน AWS เชื่อมต่อ API ของผู้ให้บริการภายนอก และจัดการฐานข้อมูลที่ปลอดภัยซึ่งจัดเก็บข้อมูลธุรกรรมไม่ซ้ำกันกว่าหลายล้านแถว</p>
+            </div>
+        </div>
+
+        <!-- คอลัมน์ด้านขวาสำหรับทักษะ (col-lg-4: กว้าง 4 จาก 12 ส่วนบนหน้าจอคอมพิวเตอร์เพื่อความสมดุล) -->
+        <div class="col-lg-4 mb-4">
+            <h2 class="fw-bold text-dark border-bottom pb-2 mb-4">ทักษะทางเทคนิค</h2>
+            <!-- gap-2: เว้นระยะห่างระหว่างป้าย Badge แต่ละอันไม่ให้ติดกันเกินไป -->
+            <div class="d-flex flex-wrap gap-2">
+                <!-- badge bg-primary: สร้างป้ายสัญลักษณ์สี่เหลี่ยมมุมมนขนาดเล็ก พื้นหลังสีน้ำเงินตามสไตล์เทคนิค -->
+                <span class="badge bg-primary fs-6 py-2 px-3">JavaScript / TypeScript</span>
+                <span class="badge bg-primary fs-6 py-2 px-3">Node.js</span>
+                <span class="badge bg-primary fs-6 py-2 px-3">Docker & K8s</span>
+                <span class="badge bg-primary fs-6 py-2 px-3">PostgreSQL</span>
+                <span class="badge bg-primary fs-6 py-2 px-3">Amazon Web Services</span>
+                <span class="badge bg-primary fs-6 py-2 px-3">Git & CI/CD Pipelines</span>
+            </div>
+        </div>
+        
+    </div>
+</section>
+
+<!-- ส่วนที่ 3: การศึกษาและใบรับรอง (id="education") | bg-light: เปลี่ยนพื้นหลังเฉพาะส่วนนี้เป็นสีเทาอ่อนเพื่อตัดพาร์ทสายตา -->
+<section id="education" class="bg-light py-5">
+    <div class="container">
+        <h2 class="fw-bold text-dark border-bottom pb-2 mb-4">การศึกษาและความสำเร็จ</h2>
+        
+        <!-- col-md-6: แบ่งพื้นที่ด้านล่างออกเป็น 2 คอลัมน์ซ้าย-ขวาเท่ากันอย่างสมมาตรเมื่อดูบนคอมพิวเตอร์ -->
+        <div class="row g-4">
+            <!-- การ์ดฝั่งซ้าย: ประวัติการศึกษา -->
+            <div class="col-md-6">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="fw-bold">ปริญญาโท วิทยาศาสตรมหาบัณฑิต (วิทยาการคอมพิวเตอร์)</h5>
+                        <p class="text-muted mb-1">State Tech University (2018 - 2020)</p>
+                        <small class="text-primary">จบการศึกษาด้วยเกียรตินิยม เชี่ยวชาญเป็นพิเศษด้านระบบเครือข่ายแบบกระจายอัจฉริยะ (Intelligent Distributed Networks)</small>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- การ์ดฝั่งขวา: ใบรับรองผลงาน -->
+            <div class="col-md-6">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="fw-bold">ใบรับรองวิชาชีพ (Certifications)</h5>
+                        <!-- ps-3: เพิ่ม Padding ซ้ายเล็กน้อยให้รายการจุดแสดงผลเยื้องเข้าในอย่างสวยงาม -->
+                        <ul class="mb-0 text-muted ps-3">
+                            <li>AWS Certified Solutions Architect – Professional</li>
+                            <li>Certified Kubernetes Administrator (CKA)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</section>
+
+<!-- ส่วนแถบด้านล่างสุดของเว็บไซต์ (Footer) -->
+<footer class="bg-dark text-white-50 text-center py-4 mt-5">
+    <div class="container">
+        <p class="mb-0">&copy; 2026 Team Portfolio. สงวนลิขสิทธิ์ทั้งหมด.</p>
+    </div>
+</footer>
+
+<!-- นำเข้า JavaScript สคริปต์การทำงานของ Bootstrap 5 -->
+<script src="https://jsdelivr.net"></script>
+</body>
+</html>

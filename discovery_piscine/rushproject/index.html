@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <!-- กำหนดการเข้ารหัสอักขระเป็น UTF-8 เพื่อให้แสดงผลภาษาไทยได้ถูกต้อง ไม่เป็นต่างดาว -->
+    <meta charset="UTF-8">
+    <!-- กำหนดให้ขนาดของหน้าเว็บปรับเปลี่ยนไปตามขนาดหน้าจอของอุปกรณ์ (Responsive) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ข้อความที่จะแสดงบนแท็บของเว็บเบราว์เซอร์ -->
+    <title>Team Portfolio - ยินดีต้อนรับ</title>
+    
+    <!-- เรียกใช้ Bootstrap 5 CSS ผ่าน CDN เพื่อนำสไตล์สำเร็จรูปมาใช้งานในระบบ -->
+    <link href="https://jsdelivr.net" rel="stylesheet">
+    
+    <!-- ส่วนสำหรับเขียน CSS เพิ่มเติมเพื่อปรับแต่งสไตล์เฉพาะจุด -->
+    <style>
+        body {
+            background-color: #f8f9fa; /* กำหนดสีพื้นหลังของเว็บเป็นสีเทาอ่อน */
+            min-height: 100vh;        /* กำหนดความสูงขั้นต่ำของหน้าเว็บให้เต็มจอพอดี */
+            display: flex;            /* เปิดใช้ระบบ Flexbox เพื่อจัดระเบียบตำแหน่งข้อมูล */
+            align-items: center;       /* จัดสิ่งต่าง ๆ ให้อยู่กึ่งกลางในแนวตั้ง */
+        }
+        .member-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* ตั้งค่าแอนิเมชันให้การเคลื่อนไหวดูนุ่มนวล */
+        }
+        /* เมื่อผู้ใช้นำเมาส์ไปชี้ที่การ์ด (Hover) */
+        .member-card:hover {
+            transform: translateY(-5px); /* ให้การ์ดยกตัวลอยขึ้นข้างบน 5 พิกเซล */
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15) !important; /* เพิ่มเงาให้การ์ดดูมีมิติ */
+        }
+    </style>
+</head>
+<body>
+
+<!-- container: กล่องครอบเนื้อหาทั้งหมดเพื่อจัดหน้าให้อยู่กึ่งกลางและมีระยะขอบซ้าย-ขวาอย่างสมดุล -->
+<div class="container py-5">
+    
+    <!-- text-center: จัดตัวอักษรให้อยู่กึ่งกลาง | mb-5: เพิ่มระยะขอบด้านล่าง (Margin Bottom) -->
+    <div class="text-center mb-5">
+        <!-- display-4: ปรับขนาดตัวอักษรหัวข้อให้ใหญ่พิเศษ | fw-bold: ทำตัวหนา | text-dark: ใช้สีข้อความเข้ม -->
+        <h1 class="display-4 fw-bold text-dark">ทีมงานมืออาชีพของเรา</h1>
+        <!-- lead: ปรับขนาดตัวอักษรคำโปรยให้เด่นขึ้น | text-muted: ใช้สีข้อความเทาจาง -->
+        <p class="lead text-muted">เลือกสมาชิกในทีมด้านล่างเพื่อดูประวัติการทำงานโดยละเอียด</p>
+    </div>
+
+    <!-- row: ระบบกริดของ Bootstrap สำหรับแบ่งคอลัมน์ | justify-content-center: จัดคอลัมน์ให้อยู่ตรงกลางหน้าจอ -->
+    <!-- g-4: กำหนดระยะห่างระหว่างคอลัมน์ (Gap) ให้ห่างกันพอดี -->
+    <div class="row justify-content-center g-4">
+        
+        <!-- col-md-5: บนหน้าจอขนาดกลางขึ้นไป (เช่น แท็บเล็ต/คอมพิวเตอร์) ให้กว้าง 5 จาก 12 ส่วนของหน้าจอ -->
+        <!-- ลิงก์สมาชิกคนที่ 1 -->
+        <div class="col-md-5">
+            <!-- card: กล่องดีไซน์สำเร็จรูป | h-100: บังคับให้การ์ดสูงเท่ากันเสมอ | shadow-sm: ใส่เงาน้อย ๆ | border-0: ลบเส้นขอบออก -->
+            <div class="card h-100 shadow-sm member-card border-0">
+                <!-- card-body: พื้นที่ภายในสำหรับใส่เนื้อหาของการ์ด | p-5: เพิ่มระยะห่างด้านใน (Padding) ทุกทิศทาง -->
+                <div class="card-body text-center p-5">
+                    
+                    <!-- bg-primary: พื้นหลังสีน้ำเงิน | text-white: ตัวอักษรสีขาว | rounded-circle: ปรับให้เป็นทรงกลม -->
+                    <!-- d-inline-flex & align-items-center & justify-content-center: คำสั่งจัดตัวอักษรให้อยู่กึ่งกลางทรงกลมอย่างสมบูรณ์ -->
+                    <div class="mb-4 bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center" style="width: 80px; height: 80px;">
+                        <span class="fs-2 fw-bold">JD</span>
+                    </div>
+                    
+                    <!-- card-title: หัวข้อหลักของการ์ด -->
+                    <h3 class="card-title fw-bold">Jane Doe</h3>
+                    <!-- text-primary: ข้อความสีน้ำเงิน -->
+                    <p class="text-primary mb-3">Senior Software Engineer</p>
+                    <p class="card-text text-muted mb-4">เชี่ยวชาญด้านสถาปัตยกรรมเว็บแบบ Full-stack, ระบบ Distributed Systems และการนำทีมพัฒนา</p>
+                    
+                    <!-- href="member1.html": เมื่อคลิกปุ่มจะลิงก์เชื่อมโยงไปยังหน้าไฟล์ member1.html -->
+                    <!-- btn-outline-primary: ปุ่มแบบเส้นขอบสีน้ำเงิน | w-100: ปรับปุ่มให้กว้างเต็มความกว้างของการ์ด -->
+                    <a href="member1.html" class="btn btn-outline-primary w-100 py-2 fw-semibold">ดูเรซูเม่อย่างละเอียด</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- ลิงก์สมาชิกคนที่ 2 -->
+        <div class="col-md-5">
+            <div class="card h-100 shadow-sm member-card border-0">
+                <div class="card-body text-center p-5">
+                    <!-- bg-success: เปลี่ยนพื้นหลังวงกลมเป็นสีเขียวเพื่อแยกความเป็นเอกลักษณ์ของบุคคล -->
+                    <div class="mb-4 bg-success text-white rounded-circle d-inline-flex align-items-center justify-content-center" style="width: 80px; height: 80px;">
+                        <span class="fs-2 fw-bold">JS</span>
+                    </div>
+                    <h3 class="card-title fw-bold">John Smith</h3>
+                    <!-- text-success: ข้อความสีเขียว -->
+                    <p class="text-success mb-3">UI/UX Designer</p>
+                    <p class="card-text text-muted mb-4">เชี่ยวชาญด้านการออกแบบ UI สมัยใหม่, การวิจัยผู้ใช้ (User Research), การทำ Wireframe และกลยุทธ์ผลิตภัณฑ์</p>
+                    
+                    <!-- href="member2.html": เมื่อคลิกปุ่มจะลิงก์เชื่อมโยงไปยังหน้าไฟล์ member2.html -->
+                    <!-- btn-outline-success: ปุ่มแบบเส้นขอบสีเขียว -->
+                    <a href="member2.html" class="btn btn-outline-success w-100 py-2 fw-semibold">ดูเรซูเม่อย่างละเอียด</a>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+<!-- เรียกใช้ Bootstrap 5 JavaScript ผ่าน CDN เพื่อให้ระบบปุ่มกดและการทำงานต่าง ๆ สมบูรณ์ -->
+<script src="https://jsdelivr.net"></script>
+</body>
+</html>
+file:///home/cchaisri/discovery_piscine/rushproject/index.html

@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>John Smith - เรซูเม่อาชีพ</title>
+    <link href="https://jsdelivr.net" rel="stylesheet">
+    <style>
+        body {
+            position: relative;
+            padding-top: 70px; /* บล็อกแก้ปัญหา Navbar ทับเนื้อหา */
+            background-color: #fafafa;
+        }
+        .hero-section {
+            /* bg: ปรับโทนสีหลักให้เป็นการไล่เฉดสีสีเขียว (#198754) เพื่อสร้างเอกลักษณ์ประจำตัวดีไซเนอร์ */
+            background: linear-gradient(135deg, #198754 0%, #146c43 100%);
+        }
+        .profile-img-placeholder {
+            width: 150px;
+            height: 150px;
+            background-color: #e9ecef;
+            border: 4px solid white;
+        }
+    </style>
+</head>
+<body data-bs-spy="scroll" data-bs-target="#resumeNav" data-bs-offset="80">
+
+<!-- เมนู Navbar ด้านบนสุด -->
+<nav id="resumeNav" class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">← หน้าแรกของทีม</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto fw-semibold">
+                <li class="nav-item"><a class="nav-link px-3" href="#profile">1. ข้อมูลโปรไฟล์</a></li>
+                <li class="nav-item"><a class="nav-link px-3" href="#experience">2. ประสบการณ์ & ทักษะ</a></li>
+                <li class="nav-item"><a class="nav-link px-3" href="#education">3. การศึกษา & ใบเซอร์</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- ส่วนที่ 1: โปรไฟล์และตำแหน่งงานเด่น -->
+<section id="profile" class="hero-section text-white py-5 shadow-sm">
+    <div class="container py-4 text-center">
+        <div class="profile-img-placeholder rounded-circle mx-auto d-flex align-items-center justify-content-center shadow mb-4 text-dark fw-bold">
+            [ รูปภาพจำลอง ]
+        </div>
+        <h1 class="display-4 fw-bold">John Smith</h1>
+        <p class="lead mb-0 text-white-50">UI/UX Designer</p>
+    </div>
+</section>
+
+<!-- ส่วนที่ 2: ผลงานความสามารถและชุดสกิลของดีไซเนอร์ -->
+<section id="experience" class="container py-5">
+    <div class="row">
+        
+        <!-- ประวัติการทำงานด้านการออกแบบ -->
+        <div class="col-lg-8 mb-4">
+            <h2 class="fw-bold text-dark border-bottom pb-2 mb-4">ประสบการณ์การทำงาน</h2>
+            
+            <div class="mb-4">
+                <div class="d-flex justify-content-between flex-wrap">
+                    <h5 class="fw-bold mb-1">Lead Product Designer</h5>
+                    <span class="text-muted small">2024 - ปัจจุบัน</span>
+                </div>
+                <!-- text-success: ปรับฟอนต์ชื่อบริษัทเป็นสีเขียวเพื่อให้คุมโทนเดียวกันทั้งเว็บไซต์ -->
+                <p class="text-success fw-medium mb-2">Creative Design Labs</p>
+                <p class="text-muted">ควบคุมดูแลระบบการออกแบบ (Design Systems) สำหรับแอปพลิเคชัน iOS และเว็บ จัดเวิร์กชอปการวิจัยผู้ใช้กว่า 20 ครั้งเพื่อค้นหาจุดที่เป็นปัญหา (Pain Points) พัฒนาลำดับขั้นตอนการใช้งานอินเทอร์เฟซจนประสบความสำเร็จ ส่งผลให้ยอดการรักษาผู้ใช้งาน (User Retention) เพิ่มขึ้น 25%</p>
+            </div>
+
+            <div>
+                <div class="d-flex justify-content-between flex-wrap">
+                    <h5 class="fw-bold mb-1">UI/UX Designer</h5>
+                    <span class="text-muted small">2021 - 2024</span>
+                </div>
+                <p class="text-success fw-medium mb-2">Digital Ventures Agency</p>
+                <p class="text-muted">ออกแบบโมเดลอินเทอร์แอคทีฟ (Interactive Mockups), Wireframes โดยละเอียด และแผนภาพเส้นทางการใช้งานของลูกค้า (Customer Journeys) บนแพลตฟอร์มมือถือต่าง ๆ ทำงานร่วมกับทีมพัฒนาโดยตรงโดยใช้ Figma เพื่อเปลี่ยนชิ้นงานดีไซน์ไปสู่โค้ดได้อย่างไร้รอยต่อ</p>
+            </div>
+        </div>
+
+        <!-- รายการทักษะสายงานการออกแบบผลิตภัณฑ์ -->
+        <div class="col-lg-4 mb-4">
+            <h2 class="fw-bold text-dark border-bottom pb-2 mb-4">ทักษะด้านการออกแบบ</h2>
+            <div class="d-flex flex-wrap gap-2">
+                <!-- bg-success: เปลี่ยนสติกเกอร์ทักษะความรู้ทั้งหมดเป็นสีเขียวตามสไตล์ของบุคคลคนที่ 2 -->
+                <span class="badge bg-success fs-6 py-2 px-3">Figma / Adobe XD</span>
+                <span class="badge bg-success fs-6 py-2 px-3">User Research</span>
+                <span class="badge bg-success fs-6 py-2 px-3">Wireframing</span>
+                <span class="badge bg-success fs-6 py-2 px-3">Prototyping</span>
+                <span class="badge bg-success fs-6 py-2 px-3">Interaction Design</span>
+                <span class="badge bg-success fs-6 py-2 px-3">HTML5 / CSS3</span>
+            </div>
+        </div>
+        
+    </div>
+</section>
+
+<!-- ส่วนที่ 3: ประวัติสถาบันและการอบรม -->
+<section id="education" class="bg-light py-5">
+    <div class="container">
+        <h2 class="fw-bold text-dark border-bottom pb-2 mb-4">การศึกษาและความสำเร็จ</h2>
+        <div class="row g-4">
+            <div class="col-md-6">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="fw-bold">ปริญญาตรี ศิลปบัณฑิต (สาขาการออกแบบกราฟิกและอินเทอร์แอคทีฟ)</h5>
+                        <p class="text-muted mb-1">Academy of Fine Arts (2017 - 2021)</p>
+                        <!-- text-success: ปรับไฮไลท์รายละเอียดข้อความเล็กให้เป็นสีเขียว -->
+                        <small class="text-success">รองเกียรตินิยมอันดับหนึ่ง ผลงานศิลปนิพนธ์ (Capstone Project) ได้รับการจัดแสดงในงานโชว์เคสการออกแบบดิจิทัลระดับท้องถิ่น</small>
+                    </div>
+                </div>
+            </div><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>John Smith - Professional Resume</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://jsdelivr.net" rel="stylesheet">
+    <style>
+        body {
+            position: relative;
+            padding-top: 70px; /* Offset for fixed-top navbar */
+            background-color: #fafafa;
+        }
+        .hero-section {
+            background: linear-gradient(135deg, #198754 0%, #146c43 100%);
+        }
+        .profile-img-placeholder {
+            width: 150px;
+            height: 150px;
+            background-color: #e9ecef;
+            border: 4px solid white;
+        }
+    </style>
+</head>
+<body data-bs-spy="scroll" data-bs-target="#resumeNav" data-bs-offset="80">
+
+<!-- Fixed Navigation Bar -->
+<nav id="resumeNav" class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">← Team Home</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto fw-semibold">
+                <li class="nav-item"><a class="nav-link px-3" href="#profile">1. Profile Summary</a></li>
+                <li class="nav-item"><a class="nav-link px-3" href="#experience">2. Experience & Skills</a></li>
+                <li class="nav-item"><a class="nav-link px-3" href="#education">3. Education & Certifications</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Part 1: Hero profile summary with photo space -->
+<section id="profile" class="hero-section text-white py-5 shadow-sm">
+    <div class="container py-4 text-center">
+        <div class="profile-img-placeholder rounded-circle mx-auto d-flex align-items-center justify-content-center shadow mb-4 text-dark fw-bold">
+            [ Photo Placeholder ]
+        </div>
+        <h1 class="display-4 fw-bold">John Smith</h1>
+        <p class="lead mb-0 text-white-50">UI/UX Designer</p>
+    </div>
+</section>
+
+<!-- Part 2: Professional Experience and Skills -->
+<section id="experience" class="container py-5">
+    <div class="row">
+        <!-- Experience Column -->
+        <div class="col-lg-8 mb-4">
+            <h2 class="fw-bold text-dark border-bottom pb-2 mb-4">Work Experience</h2>
+            
+            <div class="mb-4">
+                <div class="d-flex justify-content-between flex-wrap">
+                    <h5 class="fw-bold mb-1">Lead Product Designer</h5>
+                    <span class="text-muted small">2024 - Present</span>
+                </div>
+                <p class="text-success fw-medium mb-2">Creative Design Labs</p>
+                <p class="text-muted">Directing design systems for iOS and web products. Facilitated 20+ user research workshops to discover experience pain points. Successfully improved interface flow resulting in a 25% increase in user retention.</p>
+            </div>
+
+            <div>
+                <div class="d-flex justify-content-between flex-wrap">
+                    <h5 class="fw-bold mb-1">UI/UX Designer</h5>
+                    <span class="text-muted small">2021 - 2024</span>
+                </div>
+                <p class="text-success fw-medium mb-2">Digital Ventures Agency</p>
+                <p class="text-muted">Designed interactive interactive mockups, detailed wireframes, and customer journeys across multiple mobile platforms. Worked directly with development squads using Figma to map seamless asset translations.</p>
+            </div>
+        </div>
+
+        <!-- Skills Column -->
+        <div class="col-lg-4 mb-4">
+            <h2 class="fw-bold text-dark border-bottom pb-2 mb-4">Design Skills</h2>
+            <div class="d-flex flex-wrap gap-2">
+                <span class="badge bg-success fs-6 py-2 px-3">Figma / Adobe XD</span>
+                <span class="badge bg-success fs-6 py-2 px-3">User Research</span>
+                <span class="badge bg-success fs-6 py-2 px-3">Wireframing</span>
+                <span class="badge bg-success fs-6 py-2 px-3">Prototyping</span>
+                <span class="badge bg-success fs-6 py-2 px-3">Interaction Design</span>
+                <span class="badge bg-success fs-6 py-2 px-3">HTML5 / CSS3</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Part 3: Education & Certifications -->
+<section id="education" class="bg-light py-5">
+    <div class="container">
+        <h2 class="fw-bold text-dark border-bottom pb-2 mb-4">Education & Accomplishments</h2>
+        <div class="row g-4">
+            <div class="col-md-6">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="fw-bold">B.F.A. in Graphic & Interactive Design</h5>
+                        <p class="text-muted mb-1">Academy of Fine Arts (2017 - 2021)</p>
+                        <small class="text-success">Valedictorian runner-up. Capstone project featured in the local Digital Design Showcase.</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="fw-bold">Professional Certifications</h5>
+                        <ul class="mb-0 text-muted ps-3">
+                            <li>Google UX Design Professional Certificate</li>
+                            <li>Nielsen Norman Group (NNg) UX Master Certified</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="bg-dark text-white-50 text-center py-4 mt-5">
+    <div class="container">
+        <p class="mb-0">&copy; 2026 Team Portfolio. All rights reserved.</p>
+    </div>
+</footer>
+
+<!-- Bootstrap 5 Bundle JS -->
+<script src="https://jsdelivr.net"></script>
+</body>
+</html>
+
+            <div class="col-md-6">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="fw-bold">ใบรับรองวิชาชีพ (Certifications)</h5>
+                        <ul class="mb-0 text-muted ps-3">
+                            <li>Google UX Design Professional Certificate</li>
+                            <li>Nielsen Norman Group (NNg) UX Master Certified</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- แถบลิขสิทธิ์ท้ายหน้าจอ -->
+<footer class="bg-dark text-white-50 text-center py-4 mt-5">
+    <div class="container">
+        <p class="mb-0">&copy; 2026 Team Portfolio. สงวนลิขสิทธิ์ทั้งหมด.</p>
+    </div>
+</footer>
+
+<script src="https://jsdelivr.net"></script>
+</body>
+</html>
